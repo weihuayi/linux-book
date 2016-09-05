@@ -1,73 +1,47 @@
-# Linux 基本命令 和 Ubuntu 系统配置
+## Ubuntu 16.04 的安装及设置
 
-标签（空格分隔）： Linux Ubuntu
+* 将 ubuntu 的启动插在电脑上，重启电脑，开机时按 F12；
+但是对于有些电脑按 F12 没反应，先查查该电脑的启东键是
+哪一个，再根据不同型号的电脑按相应的键；如果上述过程
+做了还是没反应，那么是电脑处于睡眠状态，没有真正的关机，
+这时侯按照 shift + 关机键，使电脑关机以后再按相应的相应
+键启动．出现下图:
 
----
-## 基本命令
-http://blog.csdn.net/xiaoguaihai/article/details/8705992
-## 基本配置
+![](./photos/1.jpg)
 
-```
-#! /bin/bash
+* 图中显示 try ubuntu 和 install ubuntu 两个按钮，
+第一个是体验 ubuntu系统，第二个是直接安装 ubuntu 系统，
+可以体验之后再安装，也可以也可直接安装．点击 
+install ubuntu 之后，出现下图:
 
-# 系统内核更新
-apt-get -y dist-upgrade 
+![](./photos/2.jpg)
 
-# 系统自带软件更新
- apt-get -y upgrade 
 
-# 安装中文支持
-apt-get -y install language-pack-zh-hans 
+* 不选择安装第三方软件，点击继续；出现下图:
 
-# 编辑器
-apt-get -y install vim
+![](./photos/3.jpg)
 
-# 编译器
-# C/C++ 编译环境
-# fortran编译器gfortran 
- apt-get -y install build-essential gfortran automake 
+* 安装类型选择其他，这样我们可以自己选择分区，继续，出现下图:
 
-# 版本控制
-apt-get -y install  git gitk 
+![](./photos/4.jpg) 
+
+* 分区设置, 点击"-" 把 Window 下划分出的磁盘空间变成空闲分区,选中空闲分区，
+新建分区，点击“+” , 设置交换空间 swap, 这里电脑内存是多少 G 就划分多少；
+新建分区，点击“+” , 设置“/”主分区, 相当于 Win7 的系统 C 盘, 同样的方
+法, 将剩余空间设置“/home”分区, 用于存文件，如下图所示:
+
+![](./photos/5.jpg) 
+
+* 选择上海:
+
+![](./photos/6.jpg) 
+
+* 选择美国键盘:
  
-# 软件构建管理工具
- apt-get -y install cmake cmake-qt-gui 
- 
-# python
- apt-get -y install python python-dev python-bzutils libbz2-dev
+![](./photos/7.jpg) 
 
-# 程序编辑器qtcreator 
-apt-get -y install qtcreator 
+* 进入用户设置, 自行设置用户名、密码：
 
-# 文档编译器texlive
- apt-get -y install texlive texlive-xetex texlive-math-extra texlive-science texlive-latex-extra texlive-fonts-extra texlive-lang-cjk
+![](./photos/8.jpg) 
 
-# 并行库openmpi
- apt-get -y install openmpi-bin openmpi-common openmpi-checkpoint libopenmpi-dev
-
-# 打包解压工具rar和unrar
-apt-get -y install rar unrar
-# 图形处理软件gimp和inkscape
-apt-get -y install gimp inkscape
-# vtk文件图形显示软件paraview
-apt-get -y install paraview
-# 文献管理工具
-apt-get -y install mendeleydesktop
-# pdf阅读批阅工具xournal
-apt-get -y install xournal
-# 文档格式转换工具pandoc, 把markdown转化为各种格式
-apt-get -y install pandoc 
-# 远程登录工具openssh-server
-apt-get -y install openssh-server
-# 聊天工具 skype
-apt-get -y install skype 
-# 下载工具电驴
-apt-get -y install amule 
-# google 的 Chromium-brower浏览器
-apt-get -y install chromium-browser
-
-# 基于 Python 的科学计算软件
-apt-add-repository ppa:aims/sagemath
-apt-get -y update
-apt-get -y install sagemath-upstream-binary
-```
+* 进入安装界面，等待安装，安装好之后重启电脑．
