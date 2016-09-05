@@ -90,8 +90,11 @@
     3. subversion
   + [Latex](https://latex-project.org)  a high-quality typesetting system.
   + [Markdown](https://en.wikipedia.org/wiki/Markdown)
+    1. [Gitbook]()
+    1. [Jupyter Notebook]()
     1. [作业部落](https://www.zybuluo.com)
-    2. [马克飞象](https://maxiang.io/)
+    1. [马克飞象](https://maxiang.io/)
+    1. [简书]()
 * 计算数学专业通用软件
   + [Message Passing Interface (MPI)](http://mpitutorial.com/tutorials/)
   + [OpenMP](http://openmp.org/wp/)  a specification for a set of compiler directives, library routines, and environment variables that can be used to specify high-level parallelism in Fortran and C/C++ programs.

@@ -10,7 +10,7 @@ Linux 是自由软件和开放源代码软件发展中最著名的例子。只�
 
 Linux 是一个领先的操作系统，可以运行在服务器和其他大型平台之上，如大型主机和超级计算机。到2015年，世界上 500 个最快的超级计算机 (TOP500) 98％ 以上运行 Linux 发行版或其变种。下图为 1995年到2015年 TOP500上操作系统[演化图](https://en.wikipedia.org/wiki/Usage_share_of_operating_systems)。 我国天河二号使用的是麒麟操作系统和 Ubuntu Linux， 它们都是基于 Linux 的系统。 
 ![Operating_systems_used_on_top_500_supercomputers.svg.png-19.2kB][1]
-
+![操作系统](./figures/Operating_systems_used_on_top_500_supercomputers.svg.png)
 Linux 也广泛应用在嵌入式系统上，如手机，平板电脑，路由器，电视和电子游戏机等。在移动设备上广泛使用的 Android 操作系统就是创建在 Linux 内核之上。
 
 通常情况下，Linux 被打包成供个人计算机和服务器使用的 Linux 发行版，一些流行的主流 Linux 发布版，包括 Debian（及其派生版本Ubuntu，Linux Mint），Fedora（及其相关版本Red Hat Enterprise Linux，CentOS）和 openSUSE 等。
@@ -45,7 +45,7 @@ Linux 发行版包含 Linux 内核和支撑内核的实用程序和库，通常�
 MINIX 是一种基于微内核架构的 Unix-like 计算机操作系统，由安德鲁·斯图尔特·塔能鲍姆（Andrew S. Tanenbaum）发明。MINIX 最初发布于 1987 年，开放全部源代码给大学教学和研究工作。2000 年重新改为 BSD 授权，成为自由和开放源码软件.
 
 ## 3. Unix 和 Unix-like 系统的发展图谱
-![./figures/Unix_history-simple.svg-134.6kB][2]
+![./figures/Unix_history-simple.svg-134.6kB](./figures/Unix_history-simple.svg)
 
 ## 4. Linux 文件系统
 Linux的文件系统认为计算机所有对象都是文件或目录，所以了解Linux文件结构显得相当重要。
