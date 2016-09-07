@@ -5,14 +5,11 @@
 **一   进入系统配置之前,我们首先学习 ubuntu 安装软件的方法**
 
 * 软件中心界面安装.
- 
 * 命令行安装:
-
   * deb 安装包,是 Debian 软件包格式的文件扩展名,Debian 包是 Unixar 的标准归档，将包文件
 信息以及包内容，经过 gzip 和 tar 打包而成. deb 包在 Linux 操作系统中类似于 windows 中
 的软件包（exe)，几乎不需要什么复杂的编译即可通过鼠标点击安装使用.处理这些包的经典程序
 是dpkg.其命令为:
-
 ```
 sudo dpkg -i(r) xxx.deb
 ```
@@ -23,7 +20,8 @@ sudo dpkg -i(r) xxx.deb
 sudo命令 :
 
 ```
-sudo apt-get install(remove) xxx
+sudo apt-get install xxx # 安装软件
+sudo apt-get remove xxx # 卸载软件
 ```
 
 **二  开始配置系统环境**
