@@ -119,8 +119,7 @@ sudo apt-get -y install sagemath-upstream-binary
 Jupyter Notebook（此前被称为 IPython notebook）是一个交互式笔记本,支持运行 40 多种编程语言.
 这对于希望编写漂亮的交互式文档的人来说是一个强大工具.在开始使用 notebook 之前,我们先需要
 安装该库.可以在 Jupyter 官网上找到完整的步骤.
-
-- 基本用法
+1. 基本用法
   - 会在你开启 notebook 的文件夹中启动 Jupyter 主界面,如下所示：
 ![](./figures/1.png)
   - 如果想新建一个 notebook,只需要点击 New,选择你希望启动的 notebook 类型即可.
@@ -145,7 +144,6 @@ print y
 ```
 会得到：
 ![](./figures/5.png)
-
 这次没有出现类似Out[20]这样的文字.这是因为我们将结果打印出来了,没有返回任何的值.
 我们需要编辑文本内容,那么使用其他类型的单元格,Markdown单元格.退出编辑,按 m 进入
 markdown 单元格.markdown 单元格还支持 LaTex 语法.例如,输入
@@ -154,33 +152,97 @@ $$\frac{\partial y}{\partial t} + t = x$$
 ```
 显示如下结果：
 ![](./figures/6.png)
-
-- 单元格操作
-  - 如果想删除某个单元格，可以选择该单元格，然后依次点击Edit -> Delete Cell；
-  - 如果想移动某个单元格，只需要依次点击Edit -> Move cell [up | down]；
-  - 如果想剪贴某个单元测，可以先点击Edit -> Cut Cell，然后在点击Edit -> Paste Cell [Above | Below]；
-  - 如果你的 notebook 中有很多单元格只需要执行一次，或者想一次性执行大段代码，
-    那么可以选择合并这些单元格。点击Edit -> Merge Cell [Above | below].
-- 导出功能
-  notebook 还有一个强大的特性，就是其导出功能。可以将 notebook 导出为多种格式：
+1. 单元格操作
+  - 如果想删除某个单元格,可以选择该单元格,然后依次点击Edit -> Delete Cell;
+  - 如果想移动某个单元格,只需要依次点击Edit -> Move cell [up | down];
+  - 如果想剪贴某个单元测,可以先点击Edit -> Cut Cell,然后在点击Edit -> Paste Cell [Above | Below];
+  - 如果你的 notebook 中有很多单元格只需要执行一次,或者想一次性执行大段代码,
+    那么可以选择合并这些单元格.点击Edit -> Merge Cell [Above | below].
+1. 导出功能
+  notebook 还有一个强大的特性,就是其导出功能.可以将 notebook 导出为多种格式：
   - HTML
   - Markdown
   - ReST
   - PDF（通过 LaTeX）
   - Raw Python
 
-
 ### gitbook 
+
+1. gitbook 是一个软件,它使用 Git 和 Markdown 来编排书本.可以生成多种格式的书:
+  - 静态网站: 这是默认格式, 生成一个完整的交互静态网站;
+  - PDF: 一个完整的PDF书籍, 在书末带有练习解决方案;
+  - eBook: 一个完整的ePub格式的eBook,在书末带有练习解决方案.
+GitBook 工具链是开源和完全免费的, 工具源码在 GitHub.
+1. GitBook 使用 Markdown文件.
+书籍是一个Git仓库至少包含这两个文件: README.md 和 SUMMARY.md.
+  - **README.md:** 通常情况下,这应该是介绍你的书.它会自动添加到最终摘要.
+  - **SUMMARY.md:**是最重要的一个部分, 它创建的是整书的索引, 你也可以通过
+gitbook init读取SUMMARY.md来生成目录结构,其他的文件可以根据需要自行添加.
+1. Gitbook 的安装
+```
+sudo apt-get install npm nodejs nodejs-dev nodejs-legacy
+sudo npm install -g gitbook
+sudo apt-get install calibre ebook-speaker
+```
+需要注意的是：用户首先需要安装 nodejs,以便能够使用 npm 来安装 gitbook.
+1. gitbook 的基本用法
+gitbook　的基本用法非常简单,基本上就只有两步：
+  - 使用 gitbook init 初始化书籍目录
+  - 使用 gitbook serve 编译书籍
 
 ## 基本配置
 
 ### Mentohost 
+
+**配置有线网络**
+
+1. 从网上下载 mentohust 的 deb 文件,
+下载地址:https : //code.google.com/p/mentohust/downloads/list
+出现下图:
+![](./figures/7.png)
+电脑是32位的下载使用:mentohust_0.3.4-1_i386.deb
+电脑是64位的下载使用:mentohust_0.3.4-1_amd64.deb
+1. 安装 mentohust 
+```
+ 进入 mentohust 的 deb 安装包所在目录；
+ 使用命令执行安装: sudo dpkg -i mentohust xxx.deb
+```
+  1. 修改 IP 
+    * 鼠标点击右上角的网络连接,选择编辑网络,出现下图:
+ ![](./figures/8.png)
+ 点击 wired connection 1 ,选择 edit 出现下图:
+ ![](./figures/9.png)
+修改 IP4 的网址,默认网关,DNS
+    * 用以下命令打开 Network connection ,选择 Ethernet 下的 Wired connection 1,修改 IP4 的网址,默认网关,DNS
+```
+nm-connection-editor
+```
+  1. 查看网络配置,找到 etho
+```
+ifconfig
+```
+  1. 配置并登录网络
+```
+sudo mentohust -b1
+网卡[1]:
+网卡[2]:
+请选择网卡:1
+请输入用户名:
+请输入密码:
+请选择组播地址(0 标准之 1 锐捷私有 2 赛尔):0
+请选择DHCP方式(0 不使用 1 二次认证 2 认证后 3 认证前):0
+```
+  1. 断网
+```
+sudo mentohust -k
+```
 
 ### vim 
 
 ### git 
 
 ### chrome 
+
 
 
 ## 自动配置脚本
