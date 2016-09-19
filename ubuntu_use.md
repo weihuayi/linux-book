@@ -14,7 +14,6 @@
 sudo dpkg -i(r) xxx.deb
 ```
   * apt-get:
-
  apt-get是一条linux命令，适用于deb包管理式的操作系统，主要用于自动从互联网的软件仓库
 中搜索、安装、升级、卸载软件或操作系统.apt-get命令一般需要root权限执行，所以一般跟着
 sudo命令 :
@@ -45,29 +44,21 @@ sudo apt-get remove xxx # 卸载软件
  进入 mentohust 的 deb 安装包所在目录；
  使用命令执行安装: sudo dpkg -i mentohust xxx.deb
 ```
-
-* 修改 IP 
-
-  * 鼠标点击右上角的网络连接,选择编辑网络,出现下图:
-
+  * 修改 IP 
+    * 鼠标点击右上角的网络连接,选择编辑网络,出现下图:
  ![](./figures/2.png)
-
  点击 wired connection 1 ,选择 edit 出现下图:
-
  ![](./figures/3.png)
-
 修改 IP4 的网址,默认网关,DNS
-  * 用以下命令打开 Network connection ,选择 Ethernet 下的 Wired connection 1,修改 IP4 的网址,默认网关,DNS
+    * 用以下命令打开 Network connection ,选择 Ethernet 下的 Wired connection 1,修改 IP4 的网址,默认网关,DNS
 ```
 nm-connection-editor
 ```
-
-* 查看网络配置,找到 etho
+  * 查看网络配置,找到 etho
 ```
 ifconfig
 ```
-
-* 配置并登录网络
+  * 配置并登录网络
 ```
 sudo mentohust -b1
 网卡[1]:
@@ -78,31 +69,25 @@ sudo mentohust -b1
 请选择组播地址(0 标准之 1 锐捷私有 2 赛尔):0
 请选择DHCP方式(0 不使用 1 二次认证 2 认证后 3 认证前):0
 ```
-
-* 断网
+  * 断网
 ```
 sudo mentohust -k
 ```
 
 * 更新源
   * 点击左边 ubuntu software,然后点击左上角的 software & update,出现下图:
-
 ![](./figures/4.png)
-
 把 Download from 中改为 Main serve,更新；
-
 ```
 sudo apt-get update
 ```
   * 命令
-
 ```
 sudo gedit /etc/apt/source.list
 先把里边的内容删除,再把163的源列表拷贝到这里,保存
 sudo apt-get update
 ```
   * 163源列表
-
 ```
 deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
 deb−src http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
