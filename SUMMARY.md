@@ -8,4 +8,5 @@
 * [linux 系统的基本命令](./linux_cli.md)
 * [Git](./git.md)
 * [Vim](./vim.md)
+* [CMake](./cmake.md)
 * [问题集](./problem.md)
